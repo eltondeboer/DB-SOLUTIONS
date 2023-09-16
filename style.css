@@ -197,9 +197,10 @@ main {
   display: flex; /* Make text-content a flex container */
   flex-direction: column; /* Stack the items vertically */
   justify-content: center; /* Center items vertically */
-  align-items: flex-start; /* Align items to the left */
+  align-items: center; /* Align items to the left */
   text-align: left; /* Align text to the left */
   order: 2;
+  margin-top: -200px;
 }
 
 .image-content {
@@ -221,6 +222,7 @@ main {
         height: auto;
         padding-top: 30px;
         margin: 30px;
+        margin-top: 200px;
     }
 
     .image-content {
@@ -240,14 +242,22 @@ main {
     }
 }
 
-h1 > span {
+h1 > span.IT {
     color: white;
 }
 
 h1 {
   font-size: calc(50px + 3vw); /* Starts at 50px and scales with the viewport width */
   color: #5F7ADB;
+  margin-bottom: 30px;
 }
+
+h4 {
+  color: white;
+  margin-bottom: 30px;
+}
+
+
 
 /* Ensure the font size doesn't get too small on very narrow screens */
 @media (max-width: 400px) {
@@ -259,14 +269,9 @@ h1 {
 /* Ensure the font size doesn't get too large on very wide screens */
 @media (min-width: 1200px) {
   h1 {
-      font-size: 90px;
+      font-size: 130px;
   }
 }
-
-h4 {
-    color: white;
-  }
-
 /*Button graphics */
 
 .btn-34,
