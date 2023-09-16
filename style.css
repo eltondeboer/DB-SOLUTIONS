@@ -1,0 +1,217 @@
+html {
+    background-color: #26292B;
+}
+
+/* Flexbox for Header */
+.whole-header {
+    display: flex;
+    justify-content: space-between; /* Push the logo to the left and nav-text to the right */
+    align-items: center;
+    width: 100%; /* Take up the full width of its container */
+}
+
+.logo img {
+    max-width: 200px;        /* Ensure the logo doesn't overflow its container */
+    height: 100px;           /* Maintain the aspect ratio of the logo */
+}
+
+.nav-text {
+    display: flex;           /* Make nav-text a flex container */
+    justify-content: space-between; /* Distribute the anchor links equally */
+    align-items: center;
+    flex-grow: 1;           /* Allow nav-text to grow and take up the remaining space */
+    margin: 40px;
+}
+
+.nav-text a {
+    margin: 0 5px;        /* Add some spacing between the links */
+}
+
+/* Hamburger Icon */
+.hamburger {
+    display: none; /* Initially hidden */
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* Display Hamburger Icon for Mobile */
+@media (max-width: 600px) {
+    .hamburger {
+        display: block;
+        color: #5F7ADB;
+    }
+
+    .nav-text {
+        display: none;
+    }
+
+    /* Show Navigation Links when Checkbox is Checked */
+    #menuToggle:checked + .hamburger + .nav-text {
+        display: block;
+        position: absolute;
+        top: 60px; /* Adjust based on your header height */
+        left: 0;
+        width: 100%;
+        background-color: #26292B;
+        text-align: center;
+        z-index: 1;
+    }
+
+    .nav-text a {
+        display: block;
+        margin: 40px 0;
+    }
+}
+
+/* Hide the Checkbox */
+#menuToggle {
+    position: absolute;
+    left: -9999px;
+}
+
+.nav-text a {
+    font-family: 'Caveat', cursive;
+    font-family: 'Libre Baskerville', serif;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 20px;
+    color: #5F7ADB;
+    text-decoration: none;
+}
+
+.nav-text a:hover {
+    color: #3F5ABD; /* Slightly darker shade for hover. Adjust as needed */
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.text-content {
+    flex: 1; /* This allows the text content to take up the remaining space */
+    padding: 20px;
+    order: 2; /* This positions the text-content after the image-content */
+
+    display: flex; /* Make text-content a flex container */
+    flex-direction: column; /* Stack the items vertically */
+    justify-content: center; /* Center items vertically */
+    align-items: center; /* Center items horizontally */
+    text-align: right; /* Align text to the right */
+}
+
+.image-content {
+    flex-basis: 500px; /* This ensures the image container doesn't grow or shrink */
+    position: relative; /* This is to ensure the image stays within this container */
+    order: 1; /* This positions the image-content before the text-content */
+}
+#Abstract {
+    max-width: 100%; /* This ensures the image doesn't overflow its container */
+    height: auto; /* This maintains the aspect ratio */
+}
+
+/* On smaller screens */
+@media (max-width: 600px) {
+    .container {
+        flex-direction: column-reverse; /* This stacks the text on top of the image */
+    }
+
+    .image-content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: -1; /* This sends the image behind the text */
+    }
+
+    .text-content {
+        z-index: 1; /* This ensures the text stays on top of the image */
+        background-color: #2C313B; /* Optional: This adds a slight white background to the text to make it more readable */
+        border-radius: 20px;
+    }
+}
+
+h1 > span {
+    color: white;
+}
+
+h1 {
+    color: #5F7ADB;
+    font-size: 60px;
+}
+
+h4 {
+    color: white;
+  }
+
+/*Button graphics */
+
+.btn-34,
+.btn-34 *,
+.btn-34 :after,
+.btn-34 :before,
+.btn-34:after,
+.btn-34:before {
+  border: 0 solid;
+  box-sizing: border-box;
+}
+.btn-34 {
+  -webkit-tap-highlight-color: transparent;
+  background-color: #5F7ADB;
+  background-image: none;
+  color: #26292B;
+  cursor: pointer;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
+    Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  font-size: 100%;
+  font-weight: 900;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+}
+.btn-34:disabled {
+  cursor: default;
+}
+.btn-34:-moz-focusring {
+  outline: auto;
+}
+.btn-34 svg {
+  display: block;
+}
+.btn-34 [hidden] {
+  display: none;
+}
+.btn-34 {
+  border-radius: 99rem;
+  border-width: 2px;
+  overflow: hidden;
+  padding: 0.8rem 3rem;
+  position: relative;
+}
+.btn-34:hover {
+  transform: scale(1.1);
+}
+.btn-34 span {
+  font-weight: 900;
+  mix-blend-mode: difference;
+}
+.btn-34:before {
+  aspect-ratio: 1;
+  background: #3F5ABD;
+  border-radius: 50%;
+  content: "";
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.2s;
+  width: 0;
+}
+.btn-34:hover:before {
+  width: 100%;
+}
+
+/*Button graphics  END */
