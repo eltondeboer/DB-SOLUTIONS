@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
 
 body {
@@ -83,19 +84,13 @@ body {
 }
 
 h2 {
-  display: block;
+  display: flex;
   position: relative;
   padding: 0.10em 0;
-  margin: 0 15rem;
+  margin: 0 8rem;
   color: white;
   font-size: 50px;
-}
-
-h2 {
-  margin-top: 100px;
   display: inline-block;
-  position: relative;
-  color: white;
 }
 
 h2::after {
@@ -106,7 +101,7 @@ h2::after {
   height: 4px;
   bottom: 0;
   left: 0;
-  background-color: #0087ca;
+  background-color: var(--accent);
   transform-origin: bottom right;
   transition: transform 0.25s ease-out;
 }
@@ -190,6 +185,20 @@ main {
     display: block;
   }
 
+  .h2wrapper {
+    margin: 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  h2::after {
+    transform: scaleX(1);
+    transform-origin: bottom left; 
+  }
+
   .header{
     padding-right: 30px;
   }
@@ -217,7 +226,6 @@ main {
     font-size: 24px;
     box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1) inset;
   }
-
 }
 
 .container {
@@ -264,6 +272,7 @@ main {
         top: 0;
         left: 0;
         width: 100%;
+        margin-top: -150px;
         z-index: -1; /* This sends the image behind the text */
     }
 
@@ -292,17 +301,20 @@ h4 {
 }
 
 
+h2 {
+  font-size: calc(50px + 3vw);
+}
 
 /* Ensure the font size doesn't get too small on very narrow screens */
 @media (max-width: 400px) {
-  h1 {
+  h1, h2 {
       font-size: 40px;
   }
 }
 
 /* Ensure the font size doesn't get too large on very wide screens */
 @media (min-width: 1200px) {
-  h1 {
+  h1, h2 {
       font-size: 130px;
   }
 }
