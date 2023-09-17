@@ -183,7 +183,7 @@ main {
 }
 
 /* Display Hamburger Icon for Mobile */
-@media (max-width: 900px) {
+@media (max-width: 1050px) {
   .hamburger,
   .toggle-menu{
     display: block;
@@ -510,7 +510,38 @@ h2 {
   display: flex;
   justify-content: center; /* Centers cards horizontally */
   align-items: stretch; /* Makes sure all cards are the same height */
-  gap: 100px; /* Optional: Provides spacing between the cards */
+  gap: 10vw; /* Optional: Provides spacing between the cards */
   flex-wrap: wrap; /* Ensures all cards are on the same line. Can use "wrap" if you want them to wrap to the next line on smaller screens */
+}
+
+@media (max-width: 1300px){
+  .services-cards{
+    gap: 1vw;
+  }
+}
+
+@media (min-width: 1050px){
+  #mobile-card{
+    display: none;
+  }
+}
+
+@media (max-width: 1050px){
+  #computer-installation,
+  #tv-sound,
+  #phone-backup {
+    display: none;
+  }
+
+  #mobile-card{
+    margin: 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-left: -91px;
+    margin-top: 30px;
+  }
 }
 /*Service Cards END*/
