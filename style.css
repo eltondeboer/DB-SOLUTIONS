@@ -8,12 +8,16 @@
 body {
   overflow-x: hidden;
   background-color: var(--background);
+  line-height: 1.6;
+  display: grid;
 }
 
 :root {
   --background: #26292B;
   --foreground: rgba(44, 49, 59);
   --accent: #5F7ADB;
+  --accent-2: #3F5ABD;
+  --neutral: white;
 }
 
 .header {
@@ -88,7 +92,7 @@ h2 {
   position: relative;
   padding: 0.10em 0;
   margin: 0 8rem;
-  color: white;
+  color: var(--neutral);
   font-size: 50px;
   display: inline-block;
 }
@@ -292,7 +296,7 @@ main {
 }
 
 h1 > span.IT {
-    color: white;
+    color: var(--neutral);
 }
 
 h1 {
@@ -302,7 +306,7 @@ h1 {
 }
 
 h4 {
-  color: white;
+  color: var(--neutral);
   margin-bottom: 30px;
 }
 
@@ -396,3 +400,109 @@ h2 {
 }
 
 /*Button graphics  END */
+
+/* Cards*/
+
+.card {
+  color: var(--neutral);
+  background-image: url(card-img-pc-2.jpg);
+  background-size: cover;
+  padding: 10rem 0 0;
+  max-width: 35ch;
+  text-align: left;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  margin: 70px;
+
+  transition: transform 500ms;
+}
+
+.card:hover,
+.card:focus-within{
+  transform: scale(1.05);
+}
+
+.card-content {
+  --padding: 2rem;
+  padding: var(--padding);
+  background: linear-gradient(
+    hsl(0 0% 0% / 0),
+    hsl(0 0% 0% / 0.3) 20%,
+    hsl(0 0% 0% / 1)
+  );
+  transform: translateY(70%);
+  transition: transform 500ms ease;
+}
+
+@media (hover) {
+  .card-content {
+    transform: translateY(65%);
+    transition: transform 500ms ease;
+  }
+}
+
+.card:hover .card-content,
+.card:focus-within .card-content{
+  transform: translateY(0);
+  transition-delay: 500ms;
+}
+
+.card:focus-within .card-content{
+  transition: 0ms;
+}
+
+.card-content > *:not(.card-title) {
+  opacity: 0;
+  transition: opacity 500ms linear;
+}
+
+.card:hover .card-content > *:not(.card-title),
+.card:focus-within .card-content > *:not(.card-title){
+  opacity: 1;
+  transition-delay: 800ms;
+}
+
+.card-title::after {
+  content: "";
+  position: absolute;
+  height: 4px;
+  background: var(--accent);
+  width: calc(100% + var(--padding));
+  left: calc(var(--padding) * -1);
+  bottom: -4px;
+  transform: scalex(0);
+  transform-origin: left;
+  transition: transform 500ms ease;
+}
+
+.card:hover .card-title::after,
+.card:focus-within .card-title::after{
+  transform: scalex(1);
+}
+
+.card-title{
+  position: relative;
+  width: max-content;
+  margin-bottom: 15px;
+}
+
+.button {
+  cursor: pointer;
+  display: inline;
+  text-decoration: none;
+  color: var(--neutral);
+  background-color: var(--accent);
+  padding: 0.5em 1.25em;
+  border-radius: 0.5rem;
+}
+.card-body {
+  margin-bottom: 15px;
+}
+
+.button:hover,
+.button:focus {
+  background-color: var(--accent-2);
+}
+
+
+/*Service Cards END*/
