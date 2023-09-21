@@ -614,3 +614,29 @@ h2 {
   visibility: hidden;
   pointer-events: none;
 }
+
+/* Customers end */
+
+/* Form start */
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+input,
+select,
+textarea{
+  background-color: transparent;
+  padding: 1.4rem;
+  border: 1px solid white;
+  width: 30rem;
+}
+
+
+
+textarea {
+  height: 6rem;
+}
+/* Form End */
