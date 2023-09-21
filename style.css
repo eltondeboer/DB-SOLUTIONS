@@ -518,11 +518,13 @@ h2 {
   align-items: stretch; /* Makes sure all cards are the same height */
   gap: 10vw; /* Optional: Provides spacing between the cards */
   flex-wrap: wrap; /* Ensures all cards are on the same line. Can use "wrap" if you want them to wrap to the next line on smaller screens */
+  padding: 100px;
 }
 
 @media (max-width: 1300px){
   .services-cards{
     gap: 1vw;
+    padding: 30px;
   }
 
   h2::after{
@@ -555,3 +557,31 @@ h2 {
   }
 }
 /*Service Cards END*/
+
+.profile_pic {
+  width: 400px;
+  flex-direction: column;
+}
+
+.profile_content {
+  text-align: center;
+}
+
+.text_ceo{
+  color: var(--neutral);
+}
+
+.about_content{
+  flex-direction: column;
+  padding: 50px;
+  margin-left: 100px;
+  background-color: var(--foreground);
+  border-radius: 40px;
+  color: var(--neutral);
+}
+
+.container_2 {
+  display: flex;
+  padding: 100px;
+  font-family: 'Poppins', sans-serif;
+}
