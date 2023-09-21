@@ -598,6 +598,10 @@ h2 {
     margin-left: 0; /* Resetting the margin */
     flex-direction: column;
   }
+
+  #services-h2, #about-us-h2, #customers-h2 {
+    scroll-margin-top: 30px;
+  }
 }
 
 #services-h2::before, #about-us-h2::before, #customers-h2::before {
