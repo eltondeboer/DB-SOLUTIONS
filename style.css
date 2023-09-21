@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -597,4 +598,13 @@ h2 {
     margin-left: 0; /* Resetting the margin */
     flex-direction: column;
   }
+}
+
+#services-h2::before, #about-us-h2::before, #customers-h2::before {
+  content: "";
+  display: block;
+  height: 30px; /* height of the offset */
+  margin-top: 30px; /* negative value of offset */
+  visibility: hidden;
+  pointer-events: none;
 }
