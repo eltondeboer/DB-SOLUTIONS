@@ -518,7 +518,7 @@ h2 {
   align-items: stretch; /* Makes sure all cards are the same height */
   gap: 10vw; /* Optional: Provides spacing between the cards */
   flex-wrap: wrap; /* Ensures all cards are on the same line. Can use "wrap" if you want them to wrap to the next line on smaller screens */
-  padding: 100px;
+  padding: 80px;
 }
 
 @media (max-width: 1300px){
@@ -569,6 +569,7 @@ h2 {
 
 .text_ceo{
   color: var(--neutral);
+  margin-top: 10px;
 }
 
 .about_content{
@@ -582,6 +583,18 @@ h2 {
 
 .container_2 {
   display: flex;
-  padding: 100px;
+  padding: 80px;
   font-family: 'Poppins', sans-serif;
+}
+
+@media (max-width: 1300px) {
+  .container_2 {
+    flex-direction: column; /* This will stack children vertically */
+    justify-content: center;
+    align-items: center;
+  }
+  .about_content {
+    margin-left: 0; /* Resetting the margin */
+    flex-direction: column;
+  }
 }
