@@ -127,12 +127,15 @@
                 <h5 id="contact-h2" class="contact-h2">Whatever you<br>need, we can<br>solve <span>IT.</span></h5>
             </div>
             <div class="form-content">
-                <form>
+                <form action="https://formsubmit.co/314c59cd3d8dd06de6a8a0fb0e3ac449" method="POST">
                     <div class="name_input">
                         <input type="Text" name="Name" placeholder="Full Name" required>
                     </div>
                     <div class="email_input">
                         <input type="Text" name="Email" placeholder="Email" required>
+                        <!--Disable captcha and redirect to thanks-->
+                        <input type="hidden" name="_next" value="http://127.0.0.1:3000/DB SOLUTIONS/DB-SOLUTIONS/thanks.html">
+                        <input type="hidden" name="_captcha" value="false">
                     </div>
                     <div class="message_input">
                         <textarea name="Message" placeholder="Message" required></textarea>
