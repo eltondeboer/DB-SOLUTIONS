@@ -536,7 +536,8 @@ h2 {
 }
 
 @media (min-width: 1050px){
-  #mobile-card{
+  #mobile-card,
+  #mobile-card-customers{
     display: none;
   }
 }
@@ -544,11 +545,15 @@ h2 {
 @media (max-width: 1050px){
   #computer-installation,
   #tv-sound,
-  #phone-backup {
+  #phone-backup,
+  #company,
+  #anita,
+  #jakob {
     display: none;
   }
 
-  #mobile-card{
+  #mobile-card,
+  #mobile-card-customers{
     margin: 0;
     text-align: center;
     display: flex;
