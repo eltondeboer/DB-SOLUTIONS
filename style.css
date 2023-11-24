@@ -582,6 +582,7 @@ h2 {
   background-color: var(--foreground);
   border-radius: 40px;
   color: var(--neutral);
+  font-size: 18px;
 }
 
 .container_2 {
@@ -599,6 +600,7 @@ h2 {
   .about_content {
     margin-left: 0; /* Resetting the margin */
     flex-direction: column;
+    font-size: 15px;
   }
 
   #services-h2, #about-us-h2, #customers-h2 {
@@ -718,3 +720,33 @@ textarea {
   }
 }
 /* Form End */
+
+
+/*Services */
+
+.services-page-text {
+  font-size: calc(30px + 2vh);
+  color: var(--accent);
+  margin-top: 30px;
+
+}
+
+/* Ensure the font size doesn't get too small on very narrow screens */
+@media (max-width: 400px) {
+  .services-page-text{
+      font-size: 20px;
+  }
+}
+
+/* Ensure the font size doesn't get too large on very wide screens */
+@media (min-width: 1200px) {
+  .services-page-text{
+      font-size: 50px;
+  }
+}
+
+@media (max-width: 1300px) {
+  .services-page-text{
+    font-size: 25px;
+  }
+}
