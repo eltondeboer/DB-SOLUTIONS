@@ -1,3 +1,4 @@
+/* Globala stilar */
 * {
   margin: 0;
   padding: 0;
@@ -6,6 +7,7 @@
   scroll-behavior: smooth;
 }
 
+/* Grundläggande kroppsstilar */
 body {
   overflow-x: hidden;
   background-color: var(--background);
@@ -13,6 +15,7 @@ body {
   display: grid;
 }
 
+/* Rotvariabler för färgschema */
 :root {
   --background: #26292B;
   --foreground: rgba(44, 49, 59);
@@ -21,6 +24,7 @@ body {
   --neutral: white;
 }
 
+/* Header stilar */
 .header {
   position: relative;
   width: 100%;
@@ -32,6 +36,7 @@ body {
   transition: 0.3s;
 }
 
+/* Logotypstilar */
 .logo a {
   display: block;
 }
@@ -45,12 +50,14 @@ body {
   object-position: top left;
 }
 
+/* Navigeringsstilar */
 .navigation {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
+/* Menystilar */
 .menu {
   display: flex;
   justify-content: center;
@@ -79,6 +86,7 @@ body {
   padding: 35px 25px 45px 25px;
 }
 
+/* Hamburgarmenystilar */
 .hamburger {
   position: relative;
   width: 30px;
@@ -90,6 +98,7 @@ body {
   transition: 0.3s;
 }
 
+/* Stilar för rubrikerna */
 h2 {
   display: flex;
   position: relative;
@@ -119,6 +128,7 @@ h2:hover:after {
   transform-origin: bottom left;
 }
 
+/* Mer hamburgarmenystilar */
 .hamburger::before,
 .hamburger::after {
   content: "";
@@ -140,6 +150,7 @@ h2:hover:after {
   width: 30px;
 }
 
+/* Stilar för att växla menyvisningen */
 .toggle-menu {
   position: absolute;
   width: 30px;
@@ -149,11 +160,13 @@ h2:hover:after {
   opacity: 0;
 }
 
+/* Gömmer hamburgarmeny och växlingsknapp */
 .hamburger,
 .toggle-menu {
   display: none;
 }
 
+/* Justerar hamburgarmenyns utseende när den är markerad */
 .navigation input:checked ~ .hamburger {
   background: transparent;
 }
@@ -175,18 +188,20 @@ h2:hover:after {
   box-shadow: 20px 0 60px rgba(0, 0, 0, 1);
 }
 
+/* Justerar header när den är fast */
 .header {
   position: fixed;
   top: 0;
-  z-index: 1000; /* Ensure header stays on top */
+  z-index: 1000; /* Säkerställer att headern är överst */
   width: 100%;
 }
 
+/* Stil för huvudelementet */
 main {
   padding-top: 100px;
 }
 
-/* Display Hamburger Icon for Mobile */
+/* Mediafrågor för mobilanpassning */
 @media (max-width: 1050px) {
   .hamburger,
   .toggle-menu{
@@ -236,45 +251,50 @@ main {
   }
 }
 
+/* Kontainerstilar för att arrangera innehåll */
 .container {
   display: flex;
-  height: 100vh; /* This ensures the container takes up the full viewport height */
+  height: 100vh;
 }
 
+/* Stilar för textinnehåll */
 .text-content {
-  flex: 1; /* This allows the text content to take up half the space */
+  flex: 1; 
   padding: 20px;
-  display: flex; /* Make text-content a flex container */
-  flex-direction: column; /* Stack the items vertically */
-  justify-content: center; /* Center items vertically */
-  align-items: center; /* Align items to the left */
-  text-align: left; /* Align text to the left */
+  display: flex; 
+  flex-direction: column; 
+  justify-content: center;
+  align-items: center; 
+  text-align: left;
   order: 2;
   margin-top: -200px;
   animation: fadeIn 2s;
 }
 
+/* Keyframe-animation för inmatningseffekt */
 @keyframes fadeIn {
   0% { opacity: 0; }
   100% { opacity: 1; }
 }
 
+/* Bildinnehållsstilar */
 .image-content {
-  flex: 1; /* This allows the image content to take up half the space */
-  overflow: hidden; /* This ensures the image doesn't overflow its container */
+  flex: 1;
+  overflow: hidden;
   order: 1;
 }
 
+/* Bildstilar */
 #Abstract {
-  width: 100%; /* This ensures the image takes up the full width of its container */
-  height: 100%; /* This ensures the image takes up the full height of its container */
-  object-fit: cover; /* This ensures the image covers the full area of its container without distorting its aspect ratio */
+  width: 100%;
+  height: 100%; 
+  object-fit: cover; 
 }
 
-/* On smaller screens */
+/* Mediafrågor för mindre skärmar */
 @media (max-width: 900px) {
     .container {
-        flex-direction: column-reverse; /* This stacks the text on top of the image */
+        flex-direction: column-reverse; 
         height: auto;
         padding-top: 30px;
         margin: 30px;
@@ -287,46 +307,49 @@ main {
         left: 0;
         width: 100%;
         margin-top: 0px;
-        z-index: -1; /* This sends the image behind the text */
+        z-index: -1; /* Sänder bilden bakom texten */
     }
 
     .text-content {
-        z-index: 1; /* This ensures the text stays on top of the image */
-        background-color: rgba(44, 49, 59, 0.98); /* Optional: This adds a slight white background to the text to make it more readable */
+        z-index: 1; /* Säkerställer att texten stannar ovanpå bilden */
+        background-color: rgba(44, 49, 59, 0.98);
         border-radius: 20px;
         padding: 50px;
         align-items: center;
     }
 }
 
+/* Rubrikstil för delen 'IT' inom h1 */
 h1 > span.IT {
     color: var(--neutral);
 }
 
+/* Stil för h1-rubriker, inklusive dynamisk fontstorlek */
 h1 {
-  font-size: calc(50px + 3vw); /* Starts at 50px and scales with the viewport width */
+  font-size: calc(50px + 3vw);
   color: #5F7ADB;
   margin-bottom: 30px;
 }
 
+/* Stil för h4-rubriker */
 h4 {
   color: var(--neutral);
   margin-bottom: 30px;
 }
 
-
+/* Stil för h2-rubriker, inklusive dynamisk fontstorlek */
 h2 {
   font-size: calc(30px + 2vw);
 }
 
-/* Ensure the font size doesn't get too small on very narrow screens */
+/* Mediafråga för att justera fontstorlek på smala skärmar */
 @media (max-width: 400px) {
   h1, h2 {
       font-size: 40px;
   }
 }
 
-/* Ensure the font size doesn't get too large on very wide screens */
+/* Mediafråga för att justera fontstorlek på breda skärmar */
 @media (min-width: 1200px) {
   h1{
       font-size: 130px;
@@ -337,9 +360,7 @@ h2 {
   }
 }
 
-
-/*Button graphics */
-
+/* Stilar för knappgrafik */
 .btn-34,
 .btn-34 *,
 .btn-34 :after,
@@ -349,6 +370,8 @@ h2 {
   border: 0 solid;
   box-sizing: border-box;
 }
+
+/* Grundläggande stil för knappar */
 .btn-34 {
   -webkit-tap-highlight-color: transparent;
   background-color: #5F7ADB;
@@ -365,9 +388,13 @@ h2 {
   padding: 0;
   text-transform: uppercase;
 }
+
+/* Stil för inaktiva knappar */
 .btn-34:disabled {
   cursor: default;
 }
+
+/* Stilar för att justera visuell återkoppling vid fokusering */
 .btn-34:-moz-focusring {
   outline: auto;
 }
@@ -377,6 +404,8 @@ h2 {
 .btn-34 [hidden] {
   display: none;
 }
+
+/* Ytterligare stil för knappar, inklusive hover-effekter */
 .btn-34 {
   border-radius: 99rem;
   border-width: 2px;
@@ -407,12 +436,7 @@ h2 {
   width: 100%;
 }
 
-/*Button graphics  END */
-
-/* Cards*/
-
-
-
+/* Kortens grundläggande stil */
 .card {
   color: var(--neutral);
   background-size: cover;
@@ -422,15 +446,16 @@ h2 {
   border-radius: 0.5rem;
   overflow: hidden;
   margin: 10px;
-
   transition: transform 500ms;
 }
 
+/* Hover-effekter för kort */
 .card:hover,
 .card:focus-within{
   transform: scale(1.05);
 }
 
+/* Stil för kortinnehållet */
 .card-content {
   --padding: 2rem;
   padding: var(--padding);
@@ -441,37 +466,39 @@ h2 {
   );
 }
 
+/* Stilar för kort vid hover */
 @media (hover) {
   .card-content {
     transform: translateY(65%);
     transition: transform 500ms ease;
   }
   .card:hover .card-content,
-.card:focus-within .card-content{
-  transform: translateY(0);
-  transition-delay: 500ms;
+  .card:focus-within .card-content{
+    transform: translateY(0);
+    transition-delay: 500ms;
+  }
+
+  .card:focus-within .card-content{
+    transition: 0ms;
+  }
+
+  .card-content > *:not(.card-title) {
+    opacity: 0;
+    transition: opacity 500ms linear;
+  }
+
+  .card:hover .card-content > *:not(.card-title),
+  .card:focus-within .card-content > *:not(.card-title){
+    opacity: 1;
+    transition-delay: 800ms;
+  }
+
+  .card-title::after{
+    transform: scalex(0);
+  }
 }
 
-.card:focus-within .card-content{
-  transition: 0ms;
-}
-
-.card-content > *:not(.card-title) {
-  opacity: 0;
-  transition: opacity 500ms linear;
-}
-
-.card:hover .card-content > *:not(.card-title),
-.card:focus-within .card-content > *:not(.card-title){
-  opacity: 1;
-  transition-delay: 800ms;
-}
-
-.card-title::after{
-  transform: scalex(0);
-}
-}
-
+/* Stil för rubrik efter-elementet inom kort */
 .card-title::after {
   content: "";
   position: absolute;
@@ -484,17 +511,20 @@ h2 {
   transition: transform 500ms ease;
 }
 
+/* Hover-effekt för kortets rubrik */
 .card:hover .card-title::after,
 .card:focus-within .card-title::after{
   transform: scalex(1);
 }
 
+/* Grundläggande stil för kortets rubrik */
 .card-title{
   position: relative;
   width: max-content;
   margin-bottom: 15px;
 }
 
+/* Stil för knappar inom kort */
 .button {
   cursor: pointer;
   display: inline;
@@ -504,26 +534,29 @@ h2 {
   padding: 0.5em 1.25em;
   border-radius: 0.5rem;
 }
+
+/* Marginal för kortens innehåll */
 .card-body {
   margin-bottom: 15px;
 }
 
+/* Hover-effekt för knappar */
 .button:hover,
 .button:focus {
   background-color: var(--accent-2);
 }
 
-
-
+/* Stil för kortgrupp */
 .services-cards {
   display: flex;
-  justify-content: center; /* Centers cards horizontally */
-  align-items: stretch; /* Makes sure all cards are the same height */
-  gap: 10vw; /* Optional: Provides spacing between the cards */
-  flex-wrap: wrap; /* Ensures all cards are on the same line. Can use "wrap" if you want them to wrap to the next line on smaller screens */
+  justify-content: center;
+  align-items: stretch;
+  gap: 10vw;
+  flex-wrap: wrap;
   padding: 80px;
 }
 
+/* Mediafråga för att justera kortgruppens stil */
 @media (max-width: 1300px){
   .services-cards{
     gap: 1vw;
@@ -535,6 +568,7 @@ h2 {
   }
 }
 
+/* Stil för att dölja vissa kort på större skärmar */
 @media (min-width: 1050px){
   #mobile-card,
   #mobile-card-customers{
@@ -542,6 +576,7 @@ h2 {
   }
 }
 
+/* Stil för att dölja och justera vissa kort på mindre skärmar */
 @media (max-width: 1050px){
   #computer-installation,
   #tv-sound,
@@ -564,22 +599,26 @@ h2 {
     margin-top: 30px;
   }
 }
-/*Service Cards END*/
+/* Avslutning av kortens stil */
 
+/* Profilbildens stil */
 .profile_pic {
   width: 400px;
   flex-direction: column;
 }
 
+/* Stil för innehåll som rör profilen */
 .profile_content {
   text-align: center;
 }
 
+/* Stil för texten om VD:n */
 .text_ceo{
   color: var(--neutral);
   margin-top: 10px;
 }
 
+/* Stil för 'Om oss'-innehållet */
 .about_content{
   flex-direction: column;
   padding: 50px;
@@ -590,20 +629,22 @@ h2 {
   font-size: 18px;
 }
 
+/* Grundläggande stil för container_2 */
 .container_2 {
   display: flex;
   padding: 80px;
   font-family: 'Poppins', sans-serif;
 }
 
+/* Mediafråga för att justera container_2 på smalare skärmar */
 @media (max-width: 1300px) {
   .container_2 {
-    flex-direction: column; /* This will stack children vertically */
+    flex-direction: column;
     justify-content: center;
     align-items: center;
   }
   .about_content {
-    margin-left: 0; /* Resetting the margin */
+    margin-left: 0;
     flex-direction: column;
     font-size: 15px;
   }
@@ -613,67 +654,75 @@ h2 {
   }
 }
 
+/* Anpassar avståndet för navigeringslänkarna för att undvika överlappning med innehåll */
 #services-h2::before, #about-us-h2::before, #customers-h2::before {
   content: "";
   display: block;
-  height: 30px; /* height of the offset */
-  margin-top: 30px; /* negative value of offset */
+  height: 30px;
+  margin-top: 30px;
   visibility: hidden;
   pointer-events: none;
 }
 
+/* Justerar marginalen för 'Customers'-sektionen */
 #customers-h2 {
   margin-top: -70px;
 }
 
-/* Customers end */
+/* Avslutar 'Customers'-sektionen */
 
-/* Form start */
-
+/* Startar formulärsektionen */
+/* Stilar för underrubriker i formuläret */
 h5 {
   font-size: calc(30px + 2vh);
   color: var(--accent);
 }
 
+/* Anpassar färg på span-element inuti h5-taggarna */
 h5 span {
   color: var(--neutral);
 }
 
-/* Ensure the font size doesn't get too small on very narrow screens */
+/* Media query för att säkerställa att textstorleken inte blir för liten på smala skärmar */
 @media (max-width: 400px) {
-  h5{
+  h5 {
       font-size: 40px;
   }
 }
 
-/* Ensure the font size doesn't get too large on very wide screens */
+/* Media query för att säkerställa att textstorleken inte blir för stor på breda skärmar */
 @media (min-width: 1200px) {
-  h5{
+  h5 {
       font-size: 80px;
   }
 }
 
+/* Layout och marginaler för formulärcontainer */
 .container_3 {
   display: flex;
   margin-bottom: 200px;
   margin-top: 80px;
 }
 
+/* Stilar för kontaktsektionens rubrik */
 .contact_h2 {
   flex: 2;
   order: 1;
 }
 
+/* Container för kontaktsektionens rubrik med anpassad marginal och padding */
 .h3wrapper {
   flex: 1;
   padding: 0.10em 0;
   margin: 0 8rem;
 }
 
+/* Extra marginal ovanför formulärinnehållet */
 .form-content {
   margin-top: 48px;
 }
 
+/* Stilar för formuläret med flexbox för layout */
 form {
   flex: 1;
   order: 2;
@@ -682,13 +731,14 @@ form {
   gap: 1rem;
   padding: 0.10em 0;
   margin: 0 4rem;
-  justify-content: center; /* Center items vertically */
+  justify-content: center;
   align-items: center;
 }
 
+/* Stilar för inputfält, väljare och textarea med anpassad bakgrundsfärg, gränser och padding */
 input,
 select,
-textarea{
+textarea {
   background-color: #CCCCCC;
   border-radius: 20px;
   padding: 1.4rem;
@@ -697,16 +747,19 @@ textarea{
   font-size: 18px;
 }
 
+/* Justerar höjden för textarea */
 textarea {
   height: 12rem;
   font-size: 18px;
 }
 
+/* Media query för att anpassa layouten av formulärcontainer på smalare skärmar */
 @media (max-width: 1300px) {
-  .container_3{
+  .container_3 {
     flex-direction: column;
   }
 
+  /* Justerar layout och stil för formuläret på smalare skärmar */
   .form {
     align-items: center;
     justify-content: center;
@@ -714,6 +767,7 @@ textarea {
     padding: 0px;
   }
 
+  /* Justerar layout och stil för rubrikcontainern på smalare skärmar */
   .h3wrapper {
     padding: 0;
     margin: 0;
@@ -724,34 +778,34 @@ textarea {
     flex-direction: column;
   }
 }
-/* Form End */
+/* Avslutar formulärsektionen */
 
-
-/*Services */
-
+/* Startar 'Services'-sektionen */
+/* Stilar för text i 'Services'-sektionen */
 .services-page-text {
   font-size: calc(30px + 2vh);
   color: var(--accent);
   margin-top: 30px;
-
 }
 
-/* Ensure the font size doesn't get too small on very narrow screens */
+/* Media query för att justera textstorleken i 'Services' för smalare skärmar */
 @media (max-width: 400px) {
-  .services-page-text{
+  .services-page-text {
       font-size: 20px;
   }
 }
 
-/* Ensure the font size doesn't get too large on very wide screens */
+/* Media query för att justera textstorleken i 'Services' för bredare skärmar */
 @media (min-width: 1200px) {
-  .services-page-text{
+  .services-page-text {
       font-size: 50px;
   }
 }
 
+/* Media query för att justera textstorleken i 'Services' för skärmar medelstora skärmar */
 @media (max-width: 1300px) {
-  .services-page-text{
+  .services-page-text {
     font-size: 25px;
   }
 }
+/* Avslutar 'Services'-sektionen */
