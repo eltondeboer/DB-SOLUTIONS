@@ -1,57 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Grundläggande sidhuvudinformation -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DBSolutions</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Överlagring för visuella effekter -->
     <div class="overlay"></div>
     <header class="header">
-            <div class="logo">
-                <a href="index.html">
-                    <img src="img/LOGO_1_PNG-removebg-preview.png" alt="Logo image">
-                </a>
-            </div>
-            <!--Nav Items-->
-            <div class="navigation">
-                
-                <input type="checkbox" class="toggle-menu">
-                <div class="hamburger"></div>
-
-                <ul class="menu">
-                    <li><a class="header-text" href="index.html">Home</a></li>
-                    <li><a class="header-text" href="services.html">Services</a></li>
-                    <li><a class="header-text" href="index.html#about-us-h2">About</a></li>
-                    <li><a class="header-text" href="customers.html">Customers</a></li>
-                    <li><a class="header-text" href="index.html#contact-h2">Contact</a></li>
-                </ul>
-            </div>
+        <!-- Logotyp -->
+        <div class="logo">
+            <a href="index.html">
+                <img src="img/LOGO_1_PNG-removebg-preview.png" alt="Logo image">
+            </a>
+        </div>
+        <!-- Navigeringsfält -->
+        <div class="navigation">
+            <!-- Meny för mindre skärmar -->
+            <input type="checkbox" class="toggle-menu">
+            <div class="hamburger"></div>
+            <!-- Navigeringslänkar -->
+            <ul class="menu">
+                <li><a class="header-text" href="index.html">Home</a></li>
+                <li><a class="header-text" href="services.html">Services</a></li>
+                <li><a class="header-text" href="index.html#about-us-h2">About</a></li>
+                <li><a class="header-text" href="customers.html">Customers</a></li>
+                <li><a class="header-text" href="index.html#contact-h2">Contact</a></li>
+            </ul>
+        </div>
     </header>
     <main>
+        <!-- Huvudinnehåll - Kunder -->
         <div class="container">
             <div class="text-content">
                 <h1 class="first-text">We did <span class="IT">IT</span>!<br></h1>
                 <h4>DE BOER Solutions, IT Consultants</h4>
+                <!-- Hemknapp -->
                 <a href="index.html">
                     <button class="btn-34"><span>GO HOME</span></button>
                 </a>
             </div>
+            <!-- Bildinnehåll -->
             <div class="image-content">
                 <img id="Abstract" src="img/Abstract-Nbg.png" alt="">
             </div>
-    </main>
+        </div>
+        <!-- Kundomdömen -->
     <div class="container_2">
         <div class="about_content">
+            <!-- Företagsomdöme -->
             <h5 class="services-page-text">Companies</h5>
-                <p>"DE BOER Solutions transformed our office's tech infrastructure. Their team was efficient, knowledgeable, and incredibly helpful. Highly recommend for any company looking to upgrade their IT setup!" - TechCorp CEO</p>  
-
+            <p>"DE BOER Solutions transformed our office's tech infrastructure. Their team was efficient, knowledgeable, and incredibly helpful. Highly recommend for any company looking to upgrade their IT setup!" - TechCorp CEO</p>  
+            <!-- Anita's omdöme -->
             <h5 class="services-page-text">Anita</h5>
             <p>"Absolutely delighted with the home entertainment system installation. DE BOER's team was professional, courteous, and their attention to detail was impeccable. I can now enjoy shows like i had never before" - Anita, Homeowner</p>
-
+            <!-- Jakob's omdöme -->
             <h5 class="services-page-text">Jakob</h5>
             <p>"I had issues with my phone's backup and data retrieval. The team at DE BOER Solutions resolved it quickly and efficiently only one week after contacting.  Their service is top-notch!" - Jakob, Freelancer</p>
         </div>
+    </main>
 </body>
 </html>

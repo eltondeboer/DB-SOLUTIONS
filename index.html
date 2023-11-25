@@ -16,12 +16,12 @@
                     <img src="img/LOGO_1_PNG-removebg-preview.png" alt="Logo image">
                 </a>
             </div>
-            <!--Nav Items-->
+            <!--Navigeringsföremål -->
             <div class="navigation">
-                
+                <!--Hamburgare menyn -->
                 <input type="checkbox" class="toggle-menu">
                 <div class="hamburger"></div>
-
+                <!--Navigerings länkar -->
                 <ul class="menu">
                     <li><a class="header-text" href="index.html">Home</a></li>
                     <li><a class="header-text" href="services.html">Services</a></li>
@@ -32,6 +32,7 @@
             </div>
     </header>
     <main>
+        <!--Framsida med budskap -->
         <div class="container">
             <div class="text-content">
                 <h1 class="first-text">We do <span class="IT">IT</span><br> right.</h1>
@@ -40,14 +41,18 @@
                     <button class="btn-34"><span>Book A Call</span></button>
                 </a>
             </div>
+            <!--Bakgrundsbild -->
             <div class="image-content">
                 <img id="Abstract" src="img/Abstract-Nbg.png" alt="abstract background picture">
             </div>
         </div>
+        <!--Tjänster rubrik -->
         <div class="h2wrapper">
             <h2 id="services-h2" class="services">Services</h2>
         </div>
+        <!--Kort för tjänster -->
         <div class="services-cards">
+            <!--Dator kort -->
             <div class="card" style="background-image: url(img/card-img-pc-2.jpg);">
                 <div class="card-content" id="computer-installation">
                     <h3 class="card-title">Computers and Installation</h3>
@@ -55,6 +60,7 @@
                     <a href="services.html" class="button">Learn More</a>
                 </div>
             </div>
+            <!--TV kort -->
              <div class="card" style="background-image: url(img/card-img-tv.jpg);">
                 <div class="card-content" id="tv-sound">
                     <h3 class="card-title">TV:s and Sound Systems</h3>
@@ -62,6 +68,7 @@
                     <a href="services.html" class="button">Learn More</a>
                 </div>
             </div>
+            <!--Telefon kort -->
              <div class="card" style="background-image: url(img/card-img-phone.jpg);">
                 <div class="card-content" id="phone-backup">
                     <h3 class="card-title">Phone and Backup</h3>
@@ -69,6 +76,7 @@
                     <a href="services.html" class="button">Learn More</a>
                 </div>
             </div>
+            <!--Allmänt kort för mindre skärmar -->
             <div class="card" id="mobile-card" style="background-image: url(img/card-img-it.jpg);">
                 <div class="card-content">
                     <h3 class="card-title">We fix IT</h3>
@@ -77,21 +85,26 @@
                 </div>
             </div>
         </div>
+        <!--Om oss section -->
         <div class="h2wrapper">
             <h2 id="about-us-h2">About us</h2>
         </div>
+        <!--Profilbild och rubrik -->
         <div class="container_2">
             <div class="profile_content">
                 <img class="profile_pic" src="img/profilbild-profersionell-TBG.png" alt="Picture of the CEO">
                 <h3 class="text_ceo">Chief Operating Officer</h3>
             </div>
+            <!--Textinnehåll -->
             <div class="about_content">
                 <p class="about_text">At DE BOER Solutions, our journey began over a decade ago with a mission to simplify technology for everyday use. Our Chief Operating Officer, fueled by a profound passion for technology and innovation, has been instrumental in driving our success. With an extensive background in IT and a commitment to superior customer service, our COO leads our team in delivering practical, yet highly efficient solutions. Our approach is centered around a deep understanding of each client's unique needs, ensuring that we address them with customized, effective solutions. This commitment to personalization is coupled with an ongoing dedication to staying ahead of the curve in technological trends. We are constantly evolving and learning, enabling us to offer the most advanced and suitable solutions in the industry. Our unwavering dedication to excellence and customer satisfaction is the cornerstone of our business, making us a reliable and trusted technology partner for all our clients.</p>
             </div>
         </div>
+        <!--Kunder -->
         <div class="h2wrapper">
             <h2 id="customers-h2" class="services">Customers</h2>
         </div>
+        <!--Samma uppläg som tidigare kort -->
         <div class="services-cards">
             <div class="card" style="background-image: url(img/card-img-company.png);">
                 <div class="card-content" id="company">
@@ -114,6 +127,7 @@
                     <a href="customers.html" class="button">Learn More</a>
                 </div>
             </div>
+            <!--Mobil kort för mindre skärmar -->
             <div class="card" id="mobile-card-customers" style="background-image: url(img/card-img-happy-customer.png);">
                 <div class="card-content">
                     <h3 class="card-title">Customers Thoughts</h3>
@@ -122,10 +136,12 @@
                 </div>
             </div>
         </div>
+        <!--Foormulär som kan fyllas i -->
         <div class="container_3">
             <div class="h3wrapper">
                 <h5 id="contact-h2" class="contact-h2">Whatever you<br>need, we can<br>solve <span>IT.</span></h5>
             </div>
+            <!--Använder tjänsten formsubmit som skickar submissionen till min email -->
             <div class="form-content">
                 <form action="https://formsubmit.co/314c59cd3d8dd06de6a8a0fb0e3ac449" method="POST">
                     <div class="name_input">
@@ -133,7 +149,7 @@
                     </div>
                     <div class="email_input">
                         <input type="Text" name="Email" placeholder="Email" required>
-                        <!--Disable captcha and redirect to thanks-->
+                        <!--Tar bort captcha och flyttar trafiken till thanks.html-->
                         <input type="hidden" name="_next" value="http://127.0.0.1:3000/DB SOLUTIONS/DB-SOLUTIONS/thanks.html">
                         <input type="hidden" name="_captcha" value="false">
                     </div>
